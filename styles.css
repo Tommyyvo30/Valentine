@@ -1,0 +1,396 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background: #122139;
+  overflow: hidden;
+}
+
+.container {
+  width: 100px;
+  height: 300px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transform: scale(1);
+}
+
+#valentineText {
+  font-size: 48px;
+  text-align: center;
+  color: white;
+}
+
+.container div {
+  position: absolute;
+}
+
+.container .glow {
+  width: 170px;
+  height: 170px;
+  border-radius: 100%;
+  border: 1px solid rgba(245, 148, 184, 0.47);
+  box-shadow: 0px 0px 10px #f594b8;
+  left: -40px;
+  top: -40px;
+  transition: all 0.5s ease;
+  animation: glowing 2.5s ease-in-out infinite;
+}
+
+.container .rose-petals > div {
+  width: 45px;
+  height: 80px;
+  transition: all 0.5s ease-out;
+  background: #d52d58;
+}
+
+.container .rose-petals > div:nth-child(1) {
+  border-radius: 15px;
+  left: 20px;
+  top: -6px;
+}
+
+.container .rose-petals > div:nth-child(2),
+.container .rose-petals > div:nth-child(4),
+.container .rose-petals > div:nth-child(6) {
+  border-radius: 0px 30px 0px 30px;
+  background: #b81b43;
+  left: 0;
+  transform-origin: bottom right;
+}
+
+.container .rose-petals > div:nth-child(3),
+.container .rose-petals > div:nth-child(5),
+.container .rose-petals > div:nth-child(7) {
+  border-radius: 30px 0px 30px 0px;
+  left: 40px;
+  transform-origin: bottom left;
+}
+
+/* Animations for petals opening */
+.container .rose-petals > div:nth-child(2) {
+  animation: openRose2 3s ease-in-out forwards 2s;
+}
+
+.container .rose-petals > div:nth-child(3) {
+  animation: openRose3 3s ease-in-out forwards 2s;
+}
+
+.container .rose-petals > div:nth-child(4) {
+  animation: openRose4 3s ease-in-out forwards 2s;
+}
+
+.container .rose-petals > div:nth-child(5) {
+  animation: openRose5 3s ease-in-out forwards 2s;
+}
+
+.container .rose-petals > div:nth-child(6),
+.container .rose-petals > div:nth-child(7) {
+  animation: openRose6 3s ease-in-out forwards 2s;
+}
+
+.container .rose-leaves > div:nth-last-child(1),
+.container .rose-leaves > div:nth-child(1) {
+  background: #338f37;
+  position: absolute;
+  border-radius: 100px;
+}
+
+.container .rose-leaves > div:nth-last-child(1) {
+  width: 55px;
+  height: 30px;
+  top: 60px;
+  left: 15px;
+}
+
+.container .rose-leaves > div:nth-child(1) {
+  width: 6px;
+  height: 230px;
+  top: 80px;
+  left: 40px;
+}
+
+@keyframes glowing {
+  50% {
+    box-shadow: 0px 0px 60px #f594b8;
+  }
+}
+
+@keyframes openRose2 {
+  50% {
+    transform: rotate(-90deg);
+    top: 80px;
+    left: 100px;
+  }
+  100% {
+    transform: rotate(-60deg);
+    top: 210px;
+    left: -30px;
+  }
+}
+
+@keyframes openRose3 {
+  100% {
+    transform: rotate(60deg);
+  }
+}
+
+@keyframes openRose4 {
+  100% {
+    transform: rotate(-30deg);
+  }
+}
+
+@keyframes openRose5 {
+  100% {
+    transform: rotate(30deg);
+  }
+}
+
+@keyframes openRose6 {
+  100% {
+  }
+}
+
+@keyframes sparkle {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    bottom: 250px;
+  }
+}
+
+/* Blue Rose petals */
+.blue-rose .rose-petals > div {
+  background: #56a8e4; /* Sets all petals of the blue rose to blue */
+}
+
+.blue-rose .rose-petals > div:nth-child(2),
+.blue-rose .rose-petals > div:nth-child(4),
+.blue-rose .rose-petals > div:nth-child(6) {
+  background: #3a82b1; /* Slightly darker blue for contrast petals */
+}
+
+/* White Rose petals */
+.white-rose .rose-petals > div {
+  background: #ffffff; /* Sets all petals of the white rose to white */
+}
+
+.white-rose .rose-petals > div:nth-child(2),
+.white-rose .rose-petals > div:nth-child(4),
+.white-rose .rose-petals > div:nth-child(6) {
+  background: #e6e6e6; /* Slightly darker white for contrast petals */
+}
+
+/* Positioning for white and blue roses */
+.white-rose {
+  left: 25%;
+  transform: scale(1);
+}
+
+.blue-rose {
+  right: 25%;
+  transform: scale(01);
+}
+
+/* Additional styles for the falling petals */
+.blue-rose .falling-petal {
+  background: #56a8e4; /* Sets falling petals of the blue rose to blue */
+}
+
+.white-rose .falling-petal {
+  background: #ffffff;
+}
+
+.blue-rose .glow {
+  border: 1px solid rgba(86, 168, 228, 0.5);
+  box-shadow: 0px 0px 10px #56a8e4;
+}
+
+.white-rose .glow {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 10px #ffffff;
+}
+
+/* Blue Rose petals */
+.blue-rose .rose-petals > div {
+  background: #56a8e4;
+}
+
+.blue-rose .rose-petals > div:nth-child(2),
+.blue-rose .rose-petals > div:nth-child(4),
+.blue-rose .rose-petals > div:nth-child(6) {
+  background: #3d7cb5;
+}
+
+.white-rose .rose-petals > div {
+  background: #ffffff;
+}
+
+.white-rose .rose-petals > div:nth-child(2),
+.white-rose .rose-petals > div:nth-child(4),
+.white-rose .rose-petals > div:nth-child(6) {
+  background: #e6e6e6;
+}
+
+.blue-rose .rose-petals > div {
+  background: #56a8e4; /* Base color for blue petals */
+}
+
+.blue-rose .rose-petals > div:nth-child(2),
+.blue-rose .rose-petals > div:nth-child(4),
+.blue-rose .rose-petals > div:nth-child(6) {
+  background: #3d82bf; /* Slightly darker blue for depth */
+}
+
+/* White Rose petals */
+.white-rose .rose-petals > div {
+  background: #ffffff; /* Base color for white petals */
+}
+
+.white-rose .rose-petals > div:nth-child(2),
+.white-rose .rose-petals > div:nth-child(4),
+.white-rose .rose-petals > div:nth-child(6) {
+  background: #f0f0f0; /* Slightly darker white (light grey) for depth */
+}
+
+/* Blue glow effect */
+.blue-rose .glow {
+  box-shadow: 0px 0px 10px #56a8e4;
+}
+
+/* White glow effect */
+.white-rose .glow {
+  box-shadow: 0px 0px 10px #ffffff;
+}
+
+/* Adjusting the glowing animation for blue and white roses */
+@keyframes glowing {
+  0%,
+  100% {
+    box-shadow: 0px 0px 10px #f594b8; /* Change this to default glow color, if needed */
+  }
+  50% {
+    box-shadow: 0px 0px 60px #f594b8; /* Change this to the color you want during the pulse */
+  }
+}
+
+/* Specific glowing animation for blue rose */
+.blue-rose .glow {
+  animation: glowingBlue 2.5s ease-in-out infinite;
+}
+
+@keyframes glowingBlue {
+  0%,
+  100% {
+    box-shadow: 0px 0px 10px #56a8e4; /* Non-pulsing blue shadow */
+  }
+  50% {
+    box-shadow: 0px 0px 60px #56a8e4; /* Pulsing blue shadow */
+  }
+}
+
+/* Specific glowing animation for white rose */
+.white-rose .glow {
+  animation: glowingWhite 2.5s ease-in-out infinite;
+}
+
+@keyframes glowingWhite {
+  0%,
+  100% {
+    box-shadow: 0px 0px 10px #ffffff; /* Non-pulsing white shadow */
+  }
+  50% {
+    box-shadow: 0px 0px 60px #ffffff; /* Pulsing white shadow */
+  }
+}
+#sparkleContainer .sparkle {
+  position: absolute;
+  width: 10px; /* Reduced size */
+  height: 10px; /* Reduced size */
+  border-radius: 50%;
+  background-color: transparent;
+  opacity: 0.5;
+  /* Adjust the box-shadow color dynamically based on background color */
+  box-shadow: 0 0 8px 2px #d52d58; /* Default to pink */
+}
+
+/* Adjust the box-shadow color dynamically based on background color */
+#sparkleContainer .sparkle.blue {
+  box-shadow: 0 0 8px 2px #56a8e4; /* Blue */
+}
+
+/* Adjust the box-shadow color dynamically based on background color */
+#sparkleContainer .sparkle.white {
+  box-shadow: 0 0 8px 2px #ffffff; /* White */
+}
+
+@keyframes fallSlowly {
+  0% {
+    transform: translateY(-5%);
+  }
+  100% {
+    transform: translateY(105%);
+  }
+}
+
+@keyframes sparkleTwinkle {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.response-buttons {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.response-buttons button {
+  position: relative; /* Ensure button's position is relative for movement */
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #fff;
+  color: #333;
+  border: 2px solid #333;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.response-buttons button:hover {
+  background-color: #333;
+  color: #fff;
+}
+#noButton {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+#giantImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 9999; /* Ensure it appears on top of other content */
+}
+
+#giantImage {
+  width: 50%; /* Adjust the width as needed */
+  height: auto;
+  max-width: none; /* Override any max-width property */
+  max-height: none; /* Override any max-height property */
+}
