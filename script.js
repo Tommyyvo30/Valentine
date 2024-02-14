@@ -33,8 +33,9 @@ document.getElementById("yesButton").addEventListener("click", function () {
   var fadeInInterval = setInterval(function () {
     if (opacity >= 1) {
       clearInterval(fadeInInterval);
+      alert("5th times the charm heh");
     } else {
-      opacity += 0.001;
+      opacity += 0.005;
       giantImageContainer.style.opacity = opacity;
     }
   }, 10);
